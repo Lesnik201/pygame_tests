@@ -28,12 +28,11 @@ polygon(screen, (0, 0, 0), [(600, 250), (612, 270),
 
 # Mouth
 rect(screen, (0, 0, 0), (300, 500, 200, 40))
-
-pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
 
 while not finished:
+    pygame.display.flip()
     clock.tick(FPS)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
